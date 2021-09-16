@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
+import Navbar from './components/Navbar';
+import Container from './components/Container';
+import Empty from './components/Empty';
 
 function App() {
   const [emojisData, setemojisData] = useState([]);
@@ -15,22 +18,23 @@ function App() {
         setemojisData(res.data);
         setloading(false);
       } catch (error) {
-        console.error(error);
-        seteror(false);
+        seteror(true);
         setloading(false);
       }
     }
     fetchEmojis();
   }, []);
 
-  console.log('loading ? ', loading);
-  console.log('error ? ', eror);
-  console.log('emojisData ? ', emojisData);
-
   return (
-    <div>
-      <h1>Hallo World</h1>
-    </div>
+    <>
+      <Navbar />
+      <Container>
+        <h1>Hallo ayub</h1>
+        {/* {loading && <Empty text="loading..." />}
+        {eror && <Empty text="error!" />}
+        {emojisData.length > 0 && <p>GET DATA SUCSESS</p>} */}
+      </Container>
+    </>
   );
 }
 
