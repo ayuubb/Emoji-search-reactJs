@@ -26,7 +26,7 @@ nav {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 4rem);
-  max-width: 100vw;
+  max-width: 480px;
   padding: 1rem;
   margin: 0 auto;
   background-color: var(--main-container-color);
@@ -42,4 +42,11 @@ nav {
   align-items: center;
   text-align: center;
   font-size: 1rem;
+}
+
+.emojisGrid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-top: 2rem;
 }
