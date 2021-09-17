@@ -1,18 +1,13 @@
 import styles from './style/style.module.css';
 import PropTypes from 'prop-types';
+import EmojisBox from './EmojisBox';
 
 const Emojis = ({ emojisData }) => {
   return (
     <div className={styles.emojisGrid}>
       {emojisData.map((data, index) => (
-        <div>
-          {/* merender sebuah string menjadi sebuah element HTML  */}
-          <p
-            dangerouslySetInnerHTML={{
-              __html: `&#${data.symbol.codePointAt(0)}`,
-            }}
-          />
-        </div>
+        /* merender sebuah string menjadi sebuah element HTML  */
+        <EmojisBox key={index} title={data.title} symbol={data.symbol} />
       ))}
     </div>
   );
