@@ -1,5 +1,7 @@
 # Emoji Searcher App - React
 
+![My Image](src/assets/ss1.jpg)
+
 ##### Feature
 
 - melakukan remote data fetching di React dengan axios
