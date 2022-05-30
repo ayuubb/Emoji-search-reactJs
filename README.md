@@ -4,7 +4,7 @@
 
 ##### Feature
 
-- perform remote data capture in React with axio
+- perform remote data capture in React with axios
 - customize the rendered component according to the fetching process
 - React state management (with useState)
 - React lifecycle (with useEffect)
